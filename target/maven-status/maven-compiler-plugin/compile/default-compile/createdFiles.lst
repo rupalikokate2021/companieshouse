@@ -1,0 +1,5 @@
+com\amazon\pages\ElectronicsPage.class
+com\amazon\utils\BaseTest.class
+com\amazon\pages\MobilePhonesPage.class
+com\amazon\pages\HomePage.class
+amazon\assignment\amazonassignment\App.class
