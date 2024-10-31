@@ -44,9 +44,9 @@ public class SouceDemoAssignment extends BaseTest {
         loginSteps.i_click_on_the_login_button();
     }
 
-    @Then("I should see the welcome message")
-    public void i_should_see_the_welcome_message() {
-        loginSteps.i_should_see_the_welcome_message();
+    @Then("I should see the landing page")
+    public void i_should_see_the_landing_page() {
+        loginSteps.i_should_see_the_landing_page();
     }
 
     @Then("I should see an error message")

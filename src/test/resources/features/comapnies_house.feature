@@ -7,3 +7,5 @@ Feature: Companies House Items Search
     And I click on Add to Cart
     And I click on Cart details
     Then I should see the Cart Details
+
+    

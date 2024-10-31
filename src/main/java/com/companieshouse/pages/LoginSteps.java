@@ -36,10 +36,10 @@ public class LoginSteps {
     }
 
  
-    public void i_should_see_the_welcome_message() {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("welcomeMessage")));
-        System.out.println("Login successful: " + driver.findElement(By.id("welcomeMessage")).getText());
-        driver.quit();
+    public void i_should_see_the_landing_page() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("inventory_container")));
+        System.out.println("Login successful: " + driver.findElement(By.id("inventory_container")).getText());
+       // driver.quit();
     }
 
     public void i_should_see_an_error_message() {

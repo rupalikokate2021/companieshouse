@@ -19,7 +19,7 @@ public class CartDetails {
      public void i_should_see_cart_details() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("shopping_cart_container")));
         System.out.println("I can see the cart details: " + driver.findElement(By.id("shopping_cart_container")).getText());
-        //driver.quit();
+        driver.quit();
     }
 
     public void i_click_on_cart_details() {
