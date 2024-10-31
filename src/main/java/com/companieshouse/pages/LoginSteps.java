@@ -27,7 +27,7 @@ public class LoginSteps {
     }
 
     public void i_enter_invalid_username_and_password() {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("user-name"))).sendKeys("standard_user");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("user-name"))).sendKeys("problem_user");
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("password"))).sendKeys("secret_sauce1");
     }
 
@@ -43,8 +43,8 @@ public class LoginSteps {
     }
 
     public void i_should_see_an_error_message() {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("errorMessage")));
-        System.out.println("Error message displayed: " + driver.findElement(By.id("errorMessage")).getText());
-        driver.quit();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("error-button")));
+        System.out.println("Error message displayed: " + driver.findElement(By.className("error-button")).getText());
+       // driver.quit();
     }
 }
