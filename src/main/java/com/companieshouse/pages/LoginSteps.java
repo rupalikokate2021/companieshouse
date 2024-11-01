@@ -31,8 +31,14 @@ public class LoginSteps {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("password"))).sendKeys("secret_sauce1");
     }
 
+    public void i_donot_enter_username_and_password() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("user-name"))).sendKeys("");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("password"))).sendKeys("");
+    }
+
     public void i_click_on_the_login_button() {
         driver.findElement(By.id("login-button")).click();
+        // driver.quit();
     }
 
  
@@ -45,6 +51,6 @@ public class LoginSteps {
     public void i_should_see_an_error_message() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("error-button")));
         System.out.println("Error message displayed: " + driver.findElement(By.className("error-button")).getText());
-       // driver.quit();
+      // driver.quit();
     }
 }

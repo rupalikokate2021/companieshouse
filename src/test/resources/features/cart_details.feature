@@ -1,4 +1,4 @@
-Feature: Companies House Items Search
+Feature: Companies House cart details
 
   Scenario: Shop an item on saucedemo website
     Given I am able to login to website Successful
@@ -7,5 +7,6 @@ Feature: Companies House Items Search
     And I click on Add to Cart
     And I click on Cart details
     Then I should see the Cart Details
+    
 
     

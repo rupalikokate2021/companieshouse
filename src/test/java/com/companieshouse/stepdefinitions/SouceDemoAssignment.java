@@ -39,6 +39,11 @@ public class SouceDemoAssignment extends BaseTest {
         loginSteps.i_enter_invalid_username_and_password();
     }
 
+    @When("I do not enter username and password")
+    public void i_donot_enter_username_and_password() {
+        loginSteps.i_donot_enter_username_and_password();
+    }
+
     @When("I click on the login button")
     public void i_click_on_the_login_button() {
         loginSteps.i_click_on_the_login_button();
@@ -86,5 +91,22 @@ public class SouceDemoAssignment extends BaseTest {
     public void i_should_see_the_cart_Details() {
         cartDetails.i_should_see_cart_details();
     }  
-    
+
+    @Then("I click on checkout")
+    public void i_click_on_checkout() {
+        cartDetails.i_click_on_checkout();
+    }
+    @Then("I fill name and address details")
+    public void i_fill_name_and_address_details() {
+        cartDetails.i_fill_name_and_address_details();
+    }
+    @Then("I click on continue")
+    public void i_click_on_continue() {
+        cartDetails.i_click_on_continue();
+    }
+    @Then("I click on finish")
+    public void i_click_on_finish() {
+        cartDetails.i_click_on_finish();
+    }
+
 }
