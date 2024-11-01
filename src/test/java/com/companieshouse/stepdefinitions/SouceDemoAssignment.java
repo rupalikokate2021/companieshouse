@@ -29,9 +29,10 @@ public class SouceDemoAssignment extends BaseTest {
         loginSteps.i_am_on_the_login_page();
     }
 
-    @When("I enter valid username and password")
-    public void i_enter_valid_username_and_password() {
-        loginSteps.i_enter_valid_username_and_password();
+    @When("^I enter valid \"(.*)\" and \"(.*)\"$")
+    public void i_enter_valid_username_and_password(String username, String password) {
+        System.out.println("hello ia m "+username+":"+password);
+        loginSteps.i_enter_valid_username_and_password(username,password);
     }
 
     @When("I enter invalid username and password")
@@ -62,7 +63,7 @@ public class SouceDemoAssignment extends BaseTest {
     @Given("I am able to login to website Successful")
     public void i_am_able_to_login_to_website_Successful() {
         loginSteps.i_am_on_the_login_page();
-        loginSteps.i_enter_valid_username_and_password();
+        loginSteps.i_enter_valid_username_and_password("standard_user","secret_sauce");
         loginSteps.i_click_on_the_login_button();
         productDetails.i_should_see_the_all_products();
     }

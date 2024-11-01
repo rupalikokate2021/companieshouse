@@ -21,9 +21,9 @@ public class LoginSteps {
         driver.get("https://www.saucedemo.com/v1/index.html");
     }
 
-    public void i_enter_valid_username_and_password() {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("user-name"))).sendKeys("standard_user");
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("password"))).sendKeys("secret_sauce");
+    public void i_enter_valid_username_and_password(String username, String password) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("user-name"))).sendKeys(username);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("password"))).sendKeys(password);
     }
 
     public void i_enter_invalid_username_and_password() {
